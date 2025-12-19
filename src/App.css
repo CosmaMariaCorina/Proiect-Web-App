@@ -1,11 +1,11 @@
 :root {
-  --primary-color: #6366f1; /* Indigo modern */
-  --primary-hover: #4f46e5;
-  --bg-color: #f8fafc;      /* Gri foarte deschis */
-  --card-bg: #ffffff;
-  --text-main: #1e293b;
+  --primary-color: #b331da; 
+  --primary-hover: #531881;
+  --bg-color: #13031f;      
+  --card-bg: #5f1974;
+  --text-main: #e3d0ec;
   --text-muted: #64748b;
-  --border-color: #e2e8f0;
+  --border-color: #b331da;
   --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1);
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
 }
@@ -34,30 +34,6 @@ body {
 .page-content {
   padding: 20px;
   flex: 1;
-}
-
-/* --- Navigare --- */
-.nav-bar {
-  background: var(--card-bg);
-  padding: 15px 20px;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  box-shadow: var(--shadow-sm);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-.nav-link {
-  text-decoration: none;
-  color: var(--text-muted);
-  font-weight: 600;
-  transition: color 0.2s;
-}
-
-.nav-link:hover, .nav-link.active {
-  color: var(--primary-color);
 }
 
 /* --- Carduri și Formulare --- */
