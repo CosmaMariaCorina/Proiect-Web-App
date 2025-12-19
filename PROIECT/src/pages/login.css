@@ -1,0 +1,60 @@
+:root {
+  --primary-color: #b331da; 
+  --primary-hover: #531881;
+  --bg-color: #13031f;      
+  --card-bg: #5f1974;
+  --text-main: #e3d0ec;
+  --text-muted: #cb76e5;
+  --border-color: #b331da;
+  --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 20px;
+  border: 1px solid var(--border-color);
+  max-width: 400px;
+  margin: 40px auto;
+}
+
+.h2 {
+  margin-top: 0;
+  font-weight: 700;
+  color: var(--text-main);
+  text-align: center;
+}
+
+.p {
+    color: var(--text-muted);
+}
+button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+  width: 100%;
+}
+
+button:hover {
+  background-color: var(--primary-hover);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+button.secondary {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  width: auto;
+  padding: 8px 16px;
+}

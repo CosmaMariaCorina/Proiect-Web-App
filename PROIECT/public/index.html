@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Supabase Auth - Login</title>
+  <style>
+    body { font-family: system-ui, Arial, sans-serif; max-width: 520px; margin: 40px auto; padding: 0 16px; }
+    input { width: 100%; padding: 10px; margin: 6px 0; box-sizing: border-box; }
+    button { padding: 10px 14px; margin-right: 8px; cursor: pointer; }
+    .row { margin-top: 10px; }
+    .msg { margin-top: 12px; }
+    .ok { color: #0a7; }
+    .err { color: #c22; }
+    .muted { color: #666; font-size: 14px; }
+  </style>
+</head>
+<body>
+  <h2>Login / Register (Supabase)</h2>
+
+  <label>Email</label>
+  <input id="email" type="email" placeholder="ex: test@email.com" autocomplete="email" />
+
+  <label>Parolă</label>
+  <input id="password" type="password" placeholder="parola" autocomplete="current-password" />
+
+  <div class="row">
+    <button onclick="login()">Login</button>
+    <button onclick="registerUser()">Register</button>
+  </div>
+
+  <p class="muted">
+    Dacă ai activat email confirmation în Supabase, după Register trebuie să confirmi email-ul înainte de Login.
+  </p>
+
+  <div id="msg" class="msg"></div>
+
+  <!-- Supabase JS via CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="/auth.js"></script>
+</body>
+</html>

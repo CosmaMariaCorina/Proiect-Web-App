@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dashboard</title>
+  <style>
+    body { font-family: system-ui, Arial, sans-serif; max-width: 520px; margin: 40px auto; padding: 0 16px; }
+    button { padding: 10px 14px; cursor: pointer; }
+    .muted { color: #666; font-size: 14px; }
+  </style>
+</head>
+<body>
+  <h2>Dashboard</h2>
+  <p class="muted">Această pagină cere /me (rută protejată). Dacă nu ești logat, te trimite înapoi.</p>
+
+  <p><b>User:</b> <span id="userEmail">...</span></p>
+
+  <button onclick="logout()">Logout</button>
+  <a href="/feed">Home</a>
+
+  <script>
+    async function loadUser() {
+      const res = await fetch("/me");
+      if (!res.ok) {
+        location.href = "/";
+        return;
+      }
+      const user = await res.json();
+      document.getElementById("userEmail").textContent = user.email;
+    }
+
+    async function logout() {
+      await fetch("/logout", { method: "POST" });
+      location.href = "/";
+    }
+
+    loadUser();
+  </script>
+</body>
+</html>
